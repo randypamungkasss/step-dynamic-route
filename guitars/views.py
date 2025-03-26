@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Guitar
 
 # Create your views here.
 def index_view(request):
-    return render(request, "index.html")
+    guitars = Guitar.objects.all()
+    return render(request, "index.html", {"guitars":guitars})
