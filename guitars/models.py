@@ -1,7 +1,8 @@
 from django.db import models
+from core.models import BaseModel
 
 # Create your models here.
-class Guitar(models.Model):
+class Guitar(BaseModel):
     brand = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
