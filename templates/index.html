@@ -9,7 +9,7 @@
     <h1>Welcome to the Dynamic Route Page</h1>
     <div>
       {% for guitar in guitars %}
-      <div>{{guitar.brand}}</div>
+      <a href="{% url 'detail-view' guitar.id %}">{{guitar.brand}}</a>
       {% endfor %}
     </div>
   </body>

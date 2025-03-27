@@ -7,4 +7,5 @@ def index_view(request):
     return render(request, "index.html", {"guitars":guitars})
 
 def detail_view(request):
-    return render(request, "detail.html")
+    guitar = Guitar.objects.get(id=id)
+    return render(request, "detail.html", {'guiter':guitar})
