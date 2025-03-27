@@ -5,3 +5,6 @@ from .models import Guitar
 def index_view(request):
     guitars = Guitar.objects.all()
     return render(request, "index.html", {"guitars":guitars})
+
+def detail_view(request):
+    return render(request, "detail.html")
